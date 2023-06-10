@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?servertimezone=UTC
+    username: study
+    password: studydb
+
+mybatis:
+  mapper-locations: com/study/backend/mybatis/mapper/*.xml
