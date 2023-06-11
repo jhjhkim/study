@@ -4,7 +4,12 @@
 <mapper namespace="com.study.backend.mapper.MemberMapper">
 
     <select id="selectList" resultType="com.study.backend.domain.Member">
+        SELECT MemberId, MemberName, MemberEmail FROM study.member
+    </select>
+
+    <select id="getMemberById" parameterType="int" resultType="com.study.backend.domain.MemberDetail">
         SELECT * FROM study.member
+        WHERE MemberId = #{id}
     </select>
 
 </mapper>

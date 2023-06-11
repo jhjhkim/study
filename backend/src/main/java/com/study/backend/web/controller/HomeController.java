@@ -1,6 +1,7 @@
 package com.study.backend.web.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,5 +31,10 @@ public class HomeController {
     @GetMapping("/api/members")
     public List<Member> getList() {
         return memberService.getMemberList();
+    }
+
+    @GetMapping("/api/members/{id}")
+    public Member getMemberById(@PathVariable int id) {
+        return memberService.getMemberById(id);
     }
 }

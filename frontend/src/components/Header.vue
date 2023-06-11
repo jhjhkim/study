@@ -3,7 +3,6 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><router-link to="/">Home</router-link></li>
         <li class="nav-item"><router-link to="/Members">Members</router-link></li>
-        <li class="nav-item"><router-link to="/Search">Search</router-link></li>
       </ul>
     </header>
 </template>

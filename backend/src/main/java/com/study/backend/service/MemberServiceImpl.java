@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.study.backend.domain.Member;
+import com.study.backend.domain.MemberDetail;
 import com.study.backend.mapper.MemberMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -17,5 +18,10 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public List<Member> getMemberList() {
         return memberMapper.selectList();
+    }
+
+    @Override
+    public MemberDetail getMemberById(int id) {
+        return memberMapper.getMemberById(id);
     }
 }
